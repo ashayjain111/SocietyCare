@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { adminAPI } from '../services/api';
 import toast from 'react-hot-toast';
-import { FiPlus, FiMegaphone, FiX, FiClock } from 'react-icons/fi';
+import { FiPlus, FiMessageSquare, FiX, FiClock } from 'react-icons/fi';
 
 const CATEGORIES = ['general', 'maintenance', 'event', 'emergency', 'rule', 'notice'];
 
@@ -116,7 +116,7 @@ export default function AdminAnnouncements() {
         <div className="space-y-3">{[1,2,3].map((i) => <div key={i} className="skeleton h-32 rounded-xl" />)}</div>
       ) : announcements.length === 0 ? (
         <div className="text-center py-16 bg-white rounded-xl border border-gray-200">
-          <FiMegaphone className="text-5xl text-gray-200 mx-auto mb-3" />
+          <FiMessageSquare className="text-5xl text-gray-200 mx-auto mb-3" />
           <p className="text-gray-500 mb-4">No announcements yet</p>
           <button onClick={() => setShowForm(true)} className="px-4 py-2 bg-primary-600 text-white rounded-lg text-sm">
             Post First Announcement
